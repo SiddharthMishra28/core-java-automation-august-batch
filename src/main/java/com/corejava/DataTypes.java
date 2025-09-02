@@ -9,7 +9,7 @@ public class DataTypes {
         float price = 299.99f;
         char gender = 'M';
         byte b = 'B';
-        double distance = 100.23;
+        double distance = 100.23; // CAN ACCOMMODATE BOTH FLOAT AND INT
         String name = "siddharth";
         System.out.println(age);
         System.out.println(price);
