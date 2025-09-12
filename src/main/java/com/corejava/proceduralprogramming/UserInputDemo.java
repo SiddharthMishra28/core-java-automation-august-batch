@@ -1,4 +1,4 @@
-package com.corejava;
+package com.corejava.proceduralprogramming;
 
 import java.util.Scanner;
 

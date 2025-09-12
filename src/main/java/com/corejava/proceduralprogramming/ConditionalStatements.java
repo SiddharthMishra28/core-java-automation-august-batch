@@ -1,4 +1,4 @@
-package com.corejava;
+package com.corejava.proceduralprogramming;
 
 public class ConditionalStatements {
     public static void main(String[] args) {

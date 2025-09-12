@@ -1,4 +1,4 @@
-package com.corejava;
+package com.corejava.proceduralprogramming;
 
 public class SingleDimensionalArray {
     // _ _ _ _ _ _ _
