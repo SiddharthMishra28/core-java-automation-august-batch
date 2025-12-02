@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class TestNgHooks {
 
@@ -18,6 +16,32 @@ public class TestNgHooks {
     @BeforeTest
     public void runBefore() {
         System.out.println("I'll run before Test starts...");
+    }
+
+    @AfterMethod
+    public void afterMethodExample() {
+        System.out.println("After Method...");
+    }
+
+    @BeforeMethod
+    public void beforeMethodExample() {
+        System.out.println("Before Method");
+    }
+
+    @Test
+    public void anotherTest() {
+        System.out.println("I am another Test..");
+        Assert.assertTrue(true);
+    }
+
+    @BeforeSuite
+    public void beforeSuiteExample() {
+        System.out.println("I'll get executed once per test suite...");
+    }
+
+    @AfterSuite
+    public void afterSuiteExample() {
+        System.out.println("I'll get executed once after suite ends..");
     }
 
     @Test
@@ -37,6 +61,5 @@ public class TestNgHooks {
         }
         driver.quit();
     }
-
 
 }
