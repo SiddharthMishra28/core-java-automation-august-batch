@@ -1,0 +1,8 @@
+<suite name="MyTestSuite">
+    <test name="SanityTests">
+        <classes>
+            <class name="com.selenium.browserinteractions.testing.sanity.AuthTests"/>
+            <class name="com.selenium.browserinteractions.testing.sanity.FunctionalTests"/>
+        </classes>
+    </test>
+</suite>
