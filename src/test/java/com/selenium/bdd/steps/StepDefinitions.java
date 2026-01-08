@@ -1,0 +1,26 @@
+package com.selenium.bdd.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+
+public class StepDefinitions {
+
+    @Given("I am a branch manager with my credentials")
+    public void i_am_a_branch_manager_with_my_credentials() {
+        System.out.println("Given Step...");
+    }
+
+    @When("I login with userId and password")
+    public void i_login_with_user_id_and_password() {
+        System.out.println("When Step...");
+    }
+    @When("I click on login button")
+    public void i_click_on_login_button() {
+        System.out.println("When Step...");
+    }
+    @Then("I should land into dashboard page")
+    public void i_should_land_into_dashboard_page() {
+        System.out.println("Then Step...");
+    }
+}
