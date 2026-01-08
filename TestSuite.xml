@@ -1,0 +1,10 @@
+<suite name="Sanity Suite">
+    <listeners>
+        <listener class-name="com.selenium.reporting.ExtentTestListener" />
+    </listeners>
+    <test name="Sanity Tests">
+        <classes>
+            <class name="com.selenium.tests.Guru99LoginTest" />
+        </classes>
+    </test>
+</suite>
