@@ -1,5 +1,6 @@
 package com.selenium.bdd.lifecycle;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,7 @@ import java.util.Properties;
 
 public class Hooks {
 
-    public WebDriver driver;
+    public static WebDriver driver;
     public static Properties configProps;
 
     // EXECUTED ONLY ONCE PER CYCLE AND HENCE STATIC
@@ -27,17 +28,29 @@ public class Hooks {
         setupBrowser();
     }
 
+    @After
+    public void after() {
+        if(driver != null) {
+            driver.quit();
+        }
+    }
+
+    /**
+     * <p>Reads the central config and makes it available for the scripts</p>
+     */
     public static void readConfig() {
         try {
             FileInputStream fis = new FileInputStream(new File("src/test/resources/config.properties"));
             configProps = new Properties();
             configProps.load(fis);
-            System.out.println(configProps.getProperty("browser"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    /**
+     * <p>Creates a new instance of the browser as per provided configuration</p>
+     */
     public void setupBrowser() {
         if(configProps.getProperty("browser").equalsIgnoreCase("CHROME")) {
             driver = new ChromeDriver();

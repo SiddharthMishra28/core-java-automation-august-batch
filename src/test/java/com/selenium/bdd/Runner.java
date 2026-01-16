@@ -6,7 +6,11 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = "src/test/resources",
-        glue = {"com.selenium.bdd.steps", "com.selenium.bdd.lifecycle"}
+        glue = {"com.selenium.bdd.steps", "com.selenium.bdd.lifecycle"},
+        plugin = {
+                "pretty",
+                "html:target/cucumber-report.html"
+        }
 )
 @RunWith(Cucumber.class)
 public class Runner {
