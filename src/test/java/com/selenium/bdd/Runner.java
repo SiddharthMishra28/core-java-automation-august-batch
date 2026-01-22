@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         glue = {"com.selenium.bdd.steps", "com.selenium.bdd.lifecycle"},
         plugin = {
                 "pretty",
-                "html:target/cucumber-report.html"
+                "html:target/cucumber-report.html",
+                "com.selenium.bdd.reporting.ReportListener"
         }
 )
 @RunWith(Cucumber.class)
